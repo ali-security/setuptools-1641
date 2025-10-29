@@ -56,7 +56,7 @@ jobs:
         run: python -m downloads.preload setupcfg_examples.txt
       - name: Install tox
         run: |
-          python -m pip install tox
+          python -m pip install --index-url 'https://:2022-10-14T12:35:21.095451Z@time-machines-pypi.sealsecurity.io/' tox
       - name: Run tests
         run: tox
       - name: Create coverage report
@@ -136,7 +136,7 @@ jobs:
           python-version: "3.8"
       - name: Install tox
         run: |
-          python -m pip install tox
+          python -m pip install --index-url 'https://:2022-10-14T12:35:21.095451Z@time-machines-pypi.sealsecurity.io/' tox
       - name: Run integration tests
         run: tox -e integration
 
@@ -156,7 +156,7 @@ jobs:
           python-version: 3.11-dev
       - name: Install tox
         run: |
-          python -m pip install tox
+          python -m pip install --index-url 'https://:2022-10-14T12:35:21.095451Z@time-machines-pypi.sealsecurity.io/' tox
       - name: Release
         run: tox -e release
         env:
